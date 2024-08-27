@@ -1,0 +1,360 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agthia</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 150px;
+            background-color: #333;
+            color: #fff;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .logo img {
+            width: 160px;
+            height: 110px;
+        }
+
+        .toggle-bar {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .admin-logo {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .admin-logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .buttons button {
+            margin: 5px;
+            padding: 5px 10px;
+        }
+
+        .main-content {
+            display: flex;
+            flex: 1;
+            padding: 20px 150px;
+            min-height: 60vh;
+            gap: 20px;
+        }
+
+        .dashboard {
+            width: 250px;
+            padding: 10px;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        .table-section, .edit-section {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #1f232c;
+            margin-top: auto;
+            width: 100%;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        .hero h1 {
+            font-family: 'Made Avenue', cursive;
+            font-size: 40px;
+        }
+
+        .hero-hr {
+            border-color: #d7b27b;
+            width: 330px;
+            margin: 1vh auto;
+        }
+
+        /* Job Listings Section */
+        .job-listings {
+            padding: 2em;
+        }
+
+        .job-listings h6 {
+            font-family: 'Neusa Next Pro', sans-serif;
+            color: black;
+            margin: 0 auto;
+        }
+
+        .listing-hr1 {
+            border-color: #d7b27b;
+            width: 50px;
+            margin: 1vh 0;
+        }
+
+        .job {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .apply-btn {
+            background-color: transparent;
+            border: 2px solid #d7b27b;
+            width: 100%;
+            color: black;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-family: 'Neusa Next Pro', sans-serif;
+            margin-bottom: 2px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 10px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .toggle-bar {
+                margin-left: auto;
+            }
+
+            .main-content {
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            .dashboard {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content-area {
+                padding-left: 0;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .main-content {
+                padding: 20px;
+            }
+
+            .dashboard {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content-area {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .contai {
+                max-width: 720px;
+                min-height: 392px;
+                margin: 0 auto;
+            }
+
+            .main-content {
+                padding: 20px 150px;
+            }
+
+            .dashboard {
+                width: 250px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            .main-content {
+                margin: 0 auto;
+                min-width: 940px;
+                padding: 20px 150px;
+            }
+
+            .dashboard {
+                width: 250px;
+                margin-left: 0;
+            }
+
+            .logo {
+                width: 160px;
+            }
+
+            .toggle-bar {
+                margin-left: auto;
+            }
+        }
+
+        @media (min-width: 2000px) {
+            .main-content {
+                min-width: 1110px;
+            }
+        }
+
+        @media (min-width: 2500px) {
+            .main-content {
+                min-width: 1330px;
+            }
+        }
+
+        @media (min-width: 3000px) {
+            .main-content {
+                min-width: 1830px;
+            }
+        }
+
+        @media (min-width: 3500px) {
+            .main-content {
+                min-width: 1820px;
+            }
+        }
+
+        @media (min-width: 4000px) {
+            .main-content {
+                min-width: 1830px;
+            }
+
+        }
+
+        @media (min-width: 4500px) {
+            .main-content {
+                min-width: 2290px;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="page-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'sta1/images/logo_agthia.jpg' %}" alt="Logo"></a>
+            </div>
+            <div class="toggle-bar" onclick="togglePopup()">☰</div>
+        </div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <div class="admin-logo">
+                <img src="{% static 'sta1/images/admin_logo.jpg' %}" alt="Admin Logo">
+            </div>
+            <div class="buttons">
+                <button>Button 1</button>
+                <button>Button 2</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <section class="job-listings">
+                    <div class="job">
+                        <hr class="listing-hr1">
+                        <h6>Dashboard</h6>
+                        <hr class="listing-hr1">
+                        <button class="apply-btn" onclick="location.href='{% url 'about_adm' %}'">About</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'our_ple_adm' %}'">Our People</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'mission_adm' %}'">Mission</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'vision_adm' %}'">Vision</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'word_ceo_adm' %}'">Word from CEO/Chairman</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'news_adm' %}'">Media</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'mnge_restaurants_adm' %}'">Manage Restaurants</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'view_subscr_adm' %}'">Subscriptions</button>
+                        <button class="apply-btn" onclick="location.href='{% url 'contact_us_adm' %}'">Contact us</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area" id="content-area">
+                {% if hth %}
+                <div class="container contai">
+                    <hr class="listing-hr">
+                    <h6 style="text-align: center;">Job Listings</h6>
+                    <hr class="listing-hr">
+                    <div class="section-background">
+                        <!-- Add your content here -->
+                    </div>
+                </div>
+                {% else %}
+                <div class="section-background">
+                    <!-- Add your content here -->
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Agthia</p>
+        </footer>
+    </div>
+
+    <script>
+        function togglePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

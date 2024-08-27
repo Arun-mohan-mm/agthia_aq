@@ -1,0 +1,909 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agthia</title>
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'sta/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/style1.css' %}" type="text/css">
+
+    <style>
+        .overlay-button {
+            position: absolute;
+            top: 52%; /* Adjust button position vertically */
+            left: 16%; /* Adjust button position horizontally */
+            transform: translate(-50%, -50%); /* Center the button */
+            padding: 10px 20px; /* Adjust button padding */
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust button background color and opacity */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Adjust button border radius */
+            cursor: pointer;
+            color: #333; /* Adjust button text color */
+            font-size: 16px; /* Adjust button text size */
+            margin-left:240px;
+        }
+
+
+        .text-content {
+            position: absolute;
+            top: 30%; /* Adjust text content position vertically */
+            left: 23%; /* Center text content horizontally */
+            transform: translateX(-50%); /* Center text content */
+            color: #fff; /* Adjust text content color */
+            font-size: 15px; /* Adjust text content size */
+        }
+
+
+         .text-content1 {
+            position: absolute;
+            top: 15%; /* Adjust text content position vertically */
+            left: 20%; /* Center text content horizontally */
+            transform: translateX(-50%); /* Center text content */
+            color: #fff; /* Adjust text content color */
+            font-size: 20px; /* Adjust text content size */
+        }
+
+
+
+
+
+
+
+        .page-top-recipe {
+    background-image: url('{% static 'sta1/images/background_image1.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    height: 65vh; /* Set the height to cover the viewport height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+}
+
+.page-top-recipe .container {
+    width: 100%;
+    padding: 0;
+}
+
+.page-top-recipe .text-content1,
+.page-top-recipe .text-content {
+    color: white;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.page-top-recipe .overlay-button {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.page-top-recipe .overlay-button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+
+
+.page-top-recipe {
+    position: relative;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white; /* Adjust text color */
+}
+
+
+
+
+
+
+
+
+
+
+/* Center-align the navigation bar */
+.nav-container {
+    text-align: center;
+}
+
+/* Reset default margin and padding */
+.nav-menu,
+.main-menu,
+.sub-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block; /* Ensures inline elements can be centered */
+}
+
+/* Style main menu items */
+.main-menu > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+.main-menu > ul > li > a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white; /* Change as needed */
+}
+
+/* Style dropdown menu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green; /* Change as needed */
+    /* border: 1px solid #ccc;  Change as needed */
+    z-index: 1000;
+}
+
+/* Show dropdown menu on hover */
+.main-menu > ul > li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    z-index: 1000;
+}
+
+.sub-menu li {
+    display: block;
+}
+
+.sub-menu li a {
+    padding: 10px 20px;
+    color: white; /* Change as needed */
+    text-decoration: none;
+}
+
+.sub-menu li a:hover {
+    /* background-color: green;  Change as needed */
+}
+
+
+
+
+
+
+
+@media (max-width: 479px) {
+    /* Center-align the navigation bar */
+    .nav-container {
+        text-align: center;
+    }
+
+    /* Reset default margin and padding */
+    .nav-menu,
+    .main-menu,
+    .sub-menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block; /* Ensures inline elements can be centered */
+    }
+
+    /* Style main menu items */
+    .main-menu > ul > li {
+        display: block;
+        position: relative;
+    }
+
+    .main-menu > ul > li > a {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: white; /* Change as needed */
+    }
+
+    /* Style dropdown menu */
+    .sub-menu {
+        display: none;
+        position: relative; /* Change to relative for smaller screens */
+        top: 0;
+        left: 0;
+        transform: none; /* Remove transform */
+        background-color: green; /* Change as needed */
+        z-index: 1000;
+    }
+
+    /* Show dropdown menu on hover */
+    .main-menu > ul > li:hover .sub-menu {
+        display: block;
+    }
+
+    .sub-menu li {
+        display: block;
+    }
+
+    .sub-menu li a {
+        padding: 10px 20px;
+        color: white; /* Change as needed */
+        text-decoration: none;
+    }
+
+    .sub-menu li a:hover {
+        /* background-color: green;  Change as needed */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-section .subscribe-form input {
+	font-style: normal;
+	color:white;
+}
+
+
+.footer-section .subscribe-form input::placeholder {
+	color:white;
+}
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+
+    <!-- Header Section Begin -->
+    <header class="header-section" style="background-color:#292D36;height:220px;">
+
+        <div class="container" align="center">
+
+            <div class="logo" style="width:220px;height:220px;">
+                <a href="./index.html" style="margin-top:2px;"><img style="width:180px;height:110px;" src="{% static 'sta1/images/logo_home.jpeg' %}" alt=""></a>
+            </div><br>
+    </header>
+    <hr style="border-color: 282c35; width:100%; margin:0px;">
+    <header style="background-color:#292D36;padding:5px;height:50px;">
+
+
+                <div class="nav-container">
+                    <div class="nav-menu">
+                        <nav class="main-menu mobile-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Restaurants <span style="font-size:8px;">▼</span></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#">About Me</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Categories</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Recipe</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'reservation' %}">Reservation</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            <!--
+            <div class="nav-menu">
+                <nav class="main-menu mobile-menu">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Restaurants</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">About Me</a>
+                                </li>
+                                <li>
+                                    <a href="#">Categories</a>
+                                </li>
+                                <li>
+                                    <a href="#">Recipe</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Reservation</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                -->
+
+
+                <!--
+                <div class="nav-right search-switch">
+                    <i class="fa fa-search"></i>
+                </div>
+                -->
+
+            <!--
+            </div>
+            -->
+
+
+
+
+
+            <div id="mobile-menu-wrap"></div>
+    </header>
+    <!-- Header End -->
+
+
+
+
+    <!-- Page Top Recipe Section Begin -->
+    <section class="page-top-recipe">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="overlay-content">
+
+                    <div class="pt-recipe-item large-item">
+
+
+
+
+                            <div style="text-align:left;margin-left:300px;width:600px;">
+                                <h3 style="color:white">EVERY DISH IS A<br> CHAPTER. AND EVERY <br>CONCEPT UNFOLDS A NEW <br>CULINARY ADVENTURE.</h3><br>
+                                <h6 style="color:white">Every dish is a chapter. And every concept unfolds a new <br>culinary adventure. Every dish is a chapter.</h6><br>
+                                <button style="border:1px solid white; background-color: transparent; width:150px;color:white" onclick="location.href='{% url 'reservation' %}'">For Reservations</button>
+                            </div>
+
+                            <!--
+                            <i class="fa fa-plus"></i>
+                            -->
+
+                        <!--
+                        <div class="pt-recipe-text">
+                            <span>March 10, 2019</span>
+                            <h3>Cannellini Aglio e Olio with Salmon</h3>
+                        </div>
+                        -->
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!--
+                <div class="col-lg-3 col-md-6 order-lg-1">
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg" data-setbg="{% static 'sta/img/recipe-1.jpg' %}">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <h4>Raw Vegan Carrot Cake Bites with Avocado</h4>
+                        </div>
+                    </div>
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg" data-setbg="{% static 'sta/img/recipe-2.jpg' %}">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 order-lg-3">
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg" data-setbg="{% static 'sta/img/recipe-4.jpg' %}">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <h4>Beef Burger with French Fries and Salad</h4>
+                        </div>
+                    </div>
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg" data-setbg="{% static 'sta/img/recipe-5.jpg' %}">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <h4>Raspberry Pancakes with Honey and Butter</h4>
+                        </div>
+                    </div>
+                    -->
+
+
+
+
+                </div>
+            </div>
+    </section>
+    <!-- Page Top Recipe Section End -->
+
+
+
+
+    <!-- Top Recipe Section Begin --><br><br><br>
+    <section class="top-recipe spad" style="padding-top:0px;">
+        <div style="background-color:white" align="center">
+
+            <h6 style="color:black;">RESTAURANTS</h6>
+            <hr style="border-top: 1px solid black; width:135px; margin-left:610px;margin-top:0px;">
+            <h4>LOCAL BRANDS</h4><br>
+            <p>Every dish is a chapter. And every concept unfolds a new <br>culinary adventure. Every dish is a chapter.</p>
+
+            <div class="image-row" style="margin-left:50px; margin-right:50px; padding:0px;">
+            <img src="{% static 'sta1/images/local_brand1.jpeg' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/local_brand2.jpeg' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/local_brand3.jpeg' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/local_brand4.png' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/local_brand5.jpeg' %}" style="width:230px;height:100px;margin:60px;">
+            </div>
+
+            <br><br>
+            <h4>INTERNATIONAL BRANDS</h4><br>
+            <p>Every dish is a chapter. And every concept unfolds a new <br>culinary adventure. Every dish is a chapter.</p><br>
+
+              <div class="image-row" style="margin-left:50px; margin-right:50px; padding:0px;">
+
+            <img src="{% static 'sta1/images/international_brand1.png' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/international_brand2.png' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/international_brand3.png' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/international_brand4.png' %}" style="width:230px;height:100px;margin:60px;">
+            <img src="{% static 'sta1/images/international_brand5.png' %}" style="width:230px;height:100px;margin:60px;">
+
+            </div>
+        </div>
+
+
+
+
+
+        <!--
+        <div class="container po-relative">
+        -->
+
+
+            <!--
+            <div class="plus-icon">
+                <i class="fa fa-plus"></i>
+            </div>
+            -->
+
+            <!--
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="top-recipe-item large-item">
+                        <div class="top-recipe-img set-bg" data-setbg="{% static 'sta/img/top-recipe/recipe-1.jpg' %}">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="top-recipe-text">
+                            <div class="cat-name">Desert</div>
+                            <a href="#">
+                                <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="{% static 'sta/img/top-recipe/recipe-2.jpg' %}">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Vegan</div>
+                                    <a href="#">
+                                        <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="{% static 'sta/img/top-recipe/recipe-3.jpg' %}">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Meat lover</div>
+                                    <a href="#">
+                                        <h4>Veggie soup with Mushrooms</h4>
+                                    </a>
+                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                        magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="{% static 'sta/img/top-recipe/recipe-4.jpg' %}">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Desert</div>
+                                    <a href="#">
+                                        <h4>Caramel Ice Cream with Berries</h4>
+                                    </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="{% static 'sta/img/top-recipe/recipe-5.jpg' %}">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">Desert</div>
+                                    <a href="#">
+                                        <h4>Freash Octopuse with lime juice</h4>
+                                    </a>
+                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                        magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+    </section>
+    <!-- Top Recipe Section End -->
+
+
+
+
+
+
+    <!-- Categories Filter Section Begin -->
+    <!--
+    <div class="categories-filter-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="filter-item">
+                        <ul>
+                            <li class="active" data-filter="*">Vegetarian</li>
+                            <li data-filter=".mostpopular">Most popular</li>
+                            <li data-filter=".meatlover">Meat Lover</li>
+                            <li data-filter=".glutenfree">Gluten Free</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cf-filter" id="category-filter">
+                <div class="cf-item mix all mostpopular">
+                    <div class="cf-item-pic">
+                        <img src="{% static 'sta/img/cate-filter/cate-filter-1.jpg' %}" alt="">
+                    </div>
+                    <div class="cf-item-text">
+                        <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
+                    </div>
+                </div>
+                <div class="cf-item mix all mostpopular">
+                    <div class="cf-item-pic">
+                        <img src="{% static 'sta/img/cate-filter/cate-filter-2.jpg' %}" alt="">
+                    </div>
+                    <div class="cf-item-text">
+                        <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
+                    </div>
+                </div>
+                <div class="cf-item mix all meatlover mostpopular">
+                    <div class="cf-item-pic">
+                        <img src="{% static 'sta/img/cate-filter/cate-filter-3.jpg' %}" alt="">
+                    </div>
+                    <div class="cf-item-text">
+                        <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
+                    </div>
+                </div>
+                <div class="cf-item mix all meatlover">
+                    <div class="cf-item-pic glutenfree">
+                        <img src="{% static 'sta/img/cate-filter/cate-filter-4.jpg' %}" alt="">
+                    </div>
+                    <div class="cf-item-text">
+                        <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
+                    </div>
+                </div>
+                <div class="cf-item mix all meatlover glutenfree">
+                    <div class="cf-item-pic">
+                        <img src="{% static 'sta/img/cate-filter/cate-filter-5.jpg' %}" alt="">
+                    </div>
+                    <div class="cf-item-text">
+                        <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <!-- Categories Filter Section End -->
+
+
+
+
+
+
+    <!-- Feature Recipe Section Begin -->
+    <!--
+    <section class="feature-recipe">
+        <div class="section-title">
+            <h5>Featured Recipes</h5>
+        </div>
+        <div class="container po-relative">
+            <div class="plus-icon">
+                <i class="fa fa-plus"></i>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="fr-item">
+                        <div class="fr-item-img">
+                            <img src="{% static 'sta/img/feature-1.jpg' %}" alt="">
+                        </div>
+                        <div class="fr-item-text">
+                            <h4>Sunday Brunch: Spaghetti and Eggs Recipe</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fr-item">
+                        <div class="fr-item-img">
+                            <img src="{% static 'sta/img/feature-2.jpg' %}" alt="">
+                        </div>
+                        <div class="fr-item-text">
+                            <h4>Sunday Brunch: Spaghetti and Eggs Recipe</h4>
+                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <!-- Feature Recipe Section End -->
+
+
+
+
+
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section"  style="background-color:#1F232C;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="fs-left" style="width:40%;margin-left:20%; margin-right:10%;color:white">
+                        <!--
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="{% static 'sta/img/footer-logo.png' %}" alt="">
+                            </a>
+                        </div>
+                        -->
+
+                        <p style="color:white"><span style="text-decoration: underline overline;">CONTACT</span><br><br>
+                        AL-SHARQIA TOWER<br>
+                        FLOOR 7<br>
+                        JABER AL MUBARAK<br>
+                        STREET, BLOCK 2<br>
+                        KUWAIT CITY</p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <form action="#" class="subscribe-form">
+                        <p style="text-align:center;color:white">Join our mailing list for updates.<br>Get news & other events</p>
+                        <input type="email" placeholder="Email" style="margin-right:-5px; height:62px; width:300px;margin-left:1px; background-color: transparent; border:1px solid white;">
+                        <button type="submit" style="background-color:white;color:black">Subscribe</button>
+                    </form>
+
+
+
+                    <!--
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+                        <a href="#"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                        <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                        <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                        <a href="#"><i class="fa fa-youtube"></i><span>Youtube</span></a>
+                    </div>
+                    -->
+
+                </div>
+
+
+
+
+
+                    <div style="margin-left:2px;text-align:right">
+                        <!--
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="{% static 'sta/img/footer-logo.png' %}" alt="">
+                            </a>
+                        </div>
+                        -->
+                        <p>2226045<br>
+                        INFO@AGTHIA-FOOD.COM</p>
+                    </div>
+
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright-text" align="center">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+© Copyright
+                        <!-- &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'sta/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'sta/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'sta/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'sta/js/main.js' %}"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var menuItems = document.querySelectorAll(".main-menu > ul > li");
+
+    menuItems.forEach(function(item) {
+        item.addEventListener("click", function(event) {
+            var submenu = this.querySelector(".sub-menu");
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+            event.stopPropagation();
+        });
+    });
+
+    // Close the submenu if clicked outside
+    document.addEventListener("click", function(event) {
+        var submenus = document.querySelectorAll(".sub-menu");
+        submenus.forEach(function(submenu) {
+            if (submenu.style.display === "block" && !submenu.parentNode.contains(event.target)) {
+                submenu.style.display = "none";
+            }
+        });
+    });
+});
+
+</script>
+</body>
+
+</html>

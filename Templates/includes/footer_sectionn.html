@@ -1,0 +1,537 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agthia</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'sta/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/contact.css' %}" type="text/css">
+    <style>
+
+
+
+
+           @font-face {
+  font-family:'made avenue personal use';
+  src: url('{% static 'sta/fonts/fonts/MADEAvenuePERSONALUSE-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'minion pro';
+  src: url('{% static 'sta/fonts/fonts/MinionPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'neusa next pro';
+  src: url('{% static 'sta/fonts/fonts/NeusaNextPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka bold';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Bold.otf' %}') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka variable';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Variable.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+/* footer section */
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-section {
+    background-color: #1f232c;
+    padding: 10px 20px; /* Reduced padding */
+    color: white;
+    position: relative; /* Added to use absolute positioning within */
+}
+
+.footer-section .fs-left,
+.footer-section .subscribe-form,
+.footer-section .footer_mail {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer-section .footer_mail  p {
+    color:#d7b27b;
+}
+
+.footer-section .fs-left {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align by default */
+}
+
+.footer-section .fs-left p,
+.footer-section .subscribe-form p,
+.footer-section .footer_mail p {
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+}
+
+.footer-section .fs-left hr {
+    width: 65px;
+    border: none;
+    height: 2px;
+    background-color: #4c443a;
+    margin: 2px 0; /* Adjusted margin */
+}
+
+.footer-section .fs-left > .low-hr {
+    margin-bottom: -25px;
+}
+
+.footer-section .fs-left > .up-hr {
+    margin-top: 50px;
+}
+
+.footer-section .fs-left span {
+    font-size: 10px;
+    font-family: 'Neusa Next Pro', sans-serif;
+    letter-spacing: 3.5px;
+    margin: 2px 0; /* Adjusted margin */
+    margin-bottom: -4px;
+    margin-top: -2px;
+}
+
+.footer-section .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section .subscribe-form input[type="email"] {
+    border-color: #46484e;
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    padding: 5px; /* Reduced padding */
+}
+
+.footer-section .subscribe-form button {
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    padding: 5px 10px; /* Reduced padding */
+}
+
+.copyr_hr {
+    height: 2px; /* Ensure height is defined */
+    width: 100vw; /* Span the full viewport width */
+    background-color: #46484e; /* Make sure the color is defined correctly */
+    margin: 0; /* Remove any default margins */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align with the left edge */
+    margin-left: -20px;
+}
+
+.copyr_foo {
+    position: relative; /* Relative positioning for the parent container */
+    background-color: #1f232c;
+    padding: 5px 0; /* Reduced padding */
+    text-align: center; /* Center the content */
+}
+
+.copyright-text {
+    color: white;
+    font-size: 5px;
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    margin-top: -35px;
+    margin-bottom: -15px;
+    text-align: center; /* Center-align the text */
+}
+
+/* Flexbox Layout */
+.footer-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    position: relative;
+}
+
+.footer-section .subscribe-form input[type="email"]::placeholder {
+    color: #c8c9cb; /* Change this to your desired color */
+    opacity: 1; /* Ensure the color is not faded in some browsers */
+}
+
+
+.footer-section .fs-left,
+.footer-section .subscribe-form,
+.footer-section .footer_mail {
+    flex: 1 1 30%;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .footer-section .fs-left,
+    .footer-section .subscribe-form,
+    .footer-section .footer_mail {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Reduced margin */
+        align-items: center; /* Center-align on small screens */
+    }
+
+    .footer-section .subscribe-form input[type="email"],
+    .footer-section .subscribe-form button {
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin */
+        padding: 5px; /* Reduced padding */
+        height: 45px;
+    }
+
+    .footer-section .subscribe-form input[type="email"] {
+        text-align: center;
+    }
+
+    .footer-section .fs-left {
+        margin-left: 10%;
+    }
+}
+
+
+
+
+@media (width: 1200px) {
+
+     .footer-section .container {
+        justify-content: center; /* Center-align the container */
+    }
+
+     .footer-section .subscribe-form #subs-p {
+        margin-left:-20%;
+    }
+
+     .footer-section .subscribe-form #subs-em {
+        margin-left:-20%;
+    }
+
+      .footer-section .fs-left {
+        margin-left:2.5%;
+    }
+
+ .footer-section .subscribe-form #subs-but {
+        width:70%;
+        margin-left:-20%;
+    }
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .footer-section .container {
+        justify-content: center; /* Center-align the container */
+    }
+
+    .footer-section .subscribe-form {
+        flex-direction: column; /* Change to column to place elements on top of each other */
+        justify-content: center; /* Center-align the form elements */
+        align-items: center;
+        margin-top:-4%;
+    }
+
+    .footer-section .subscribe-form p {
+        margin-bottom: 10px; /* Add some margin below the paragraph */
+        margin-left: -170%;
+    }
+
+    .footer-section .subscribe-form input[type="email"] {
+        margin-right: 0; /* Reset margin */
+        margin-left: -95%; /* Reset margin */
+        width: 70%; /* Full width */
+        height: 45px;
+        padding: 10px;
+    }
+
+    .footer-section .subscribe-form button {
+        margin: 0; /* Reset margin */
+        height: 45px;
+        width: 20%; /* Full width */
+        margin-left: -10%;
+    }
+
+    .footer-section .footer_mail {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        text-align: right;
+        margin-right:10%;
+        margin-top:3%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .footer-section .footer_mail {
+        display: flex; /* Make it a flex container */
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Center align the items */
+    }
+
+    .footer-section .footer_mail p {
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text takes up full width for proper alignment */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-section .footer_mail {
+        display: flex; /* Make it a flex container */
+        align-items: center; /* Center align the items */
+        flex-direction: column; /* Align items vertically */
+    }
+
+    .footer-section .footer_mail p {
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text takes up full width for proper alignment */
+    }
+}
+
+@-moz-document url-prefix() {
+    .footer-section .fs-left p {
+        margin-top: 15px; /* Add top margin to ensure space between "CONTACT" and "AL-SHARQIA TOWER" */
+    }
+
+    .footer-section .fs-left hr.low-hr {
+        margin-bottom: 5px; /* Ensure space between hr and p */
+    }
+}
+
+
+@-moz-document url-prefix() {
+    @media (min-width: 1200px) and (max-width: 1300px) {
+
+    .footer-section .subscribe-form input[type="email"] {
+    margin-left:-75%;
+    width:50%;
+    height:35%;
+    }
+      .footer-section .subscribe-form button {
+      margin-left:-2%;
+      }
+
+      .footer-section .subscribe-form p {
+      margin-left:-150%;
+      }
+
+    }
+}
+
+/* footer section ends */
+
+
+
+
+/* footer to above div alignment style */
+
+
+@media (min-width: 1200px) {
+
+    .job-listings {
+        width:1060px;
+        margin-left:10.5%;
+    }
+
+    .footer-section > .container {
+        width:1225px;
+        margin-left:3%;
+    }
+
+  .footer-section .footer_mail {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        text-align: right;
+        margin-right:7.7%;
+        margin-top:3%;
+    }
+
+}
+
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+
+    .job-listings {
+       width:985px;
+       margin-left:9.2%;
+       margin:0 auto;
+    }
+
+     .footer-section > .container {
+        margin-left:1%;
+        margin:0 auto;
+    }
+
+}
+
+
+@media (min-width: 1300px) and (max-width: 1500px) {
+
+    .job-listings {
+       width:1060px;
+       margin-left:8.5%;
+       margin:0 auto;
+    }
+
+     .footer-section > .container {
+       margin-left:0.3%;
+       margin:0 auto;
+    }
+
+}
+
+
+@media (min-width: 1500px) {
+
+     .job-listings {
+       margin-left:12%;
+    }
+
+    main {
+        max-width: 1400px; /* Adjust this value as needed */
+        margin: 0 auto; /* Center the main content */
+    }
+
+
+    .footer-section .container {
+        max-width: 1400px; /* Ensure the footer aligns with the main content */
+        margin: 0 auto; /* Center the footer content */
+    }
+}
+
+
+/* footer to above div alignment style ends */
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Footer Section Begin -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="fs-left">
+            <hr class="up-hr">
+            <span style="color:#c8c9cb">CONTACT</span>
+            <hr class="low-hr"><br><br>
+            <p style="color:#c8c9cb">AL-SHARQIA TOWER<br>
+            FLOOR 7<br>
+            JABER AL MUBARAK<br>
+            STREET, BLOCK 2<br>
+            KUWAIT CITY</p>
+        </div>
+        <div class="subscribe-form">
+            <form action="{% url 'cust_subscr' %}">
+                {% csrf_token %}
+                <p id="subs-p" style="color:#c8c9cb">Join our mailing list for updates.<br>Get news & other events</p>
+                <input id="subs-em" type="email"  name="emm" placeholder="Email" required>
+                <button id="subs-but" type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer_mail">
+            <p>22260445<br>
+            INFO@AGTHIA-FOOD.COM</p>
+        </div>
+    </div>
+    <div class="copyr_foo">
+        <div class="copyr_hr"></div>
+        <p class="copyright-text">© Copyright</p>
+    </div>
+</footer>
+    <!-- Footer Section End -->
+
+
+
+
+
+    <!-- Js Plugins -->
+    <script src="{% static 'sta/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'sta/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'sta/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'sta/js/main.js' %}"></script>
+
+
+</body>
+
+</html>

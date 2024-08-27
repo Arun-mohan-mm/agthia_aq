@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>Title</title>
+    <!--add this if navbar not working in your html -->
+    <!--
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    -->
+<style>
+
+ @font-face {
+  font-family:'made avenue personal use';
+  src: url('{% static 'sta/fonts/fonts/MADEAvenuePERSONALUSE-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'minion pro';
+  src: url('{% static 'sta/fonts/fonts/MinionPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'neusa next pro';
+  src: url('{% static 'sta/fonts/fonts/NeusaNextPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka bold';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Bold.otf' %}') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka variable';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Variable.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* second navbar style */
+
+        .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+           animation: slideInFromBelow 0.6s ease-out;
+        }
+
+        @keyframes slideInFromBelow {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @media screen and (min-width: 576px) {
+
+            .navbar-custom .nav-item {
+                margin-right: 20px;
+            }
+
+        }
+
+
+        @media screen and (max-width: 575px) {
+
+            .navbar-custom .nav-item {
+                margin-left: 25px;
+                text-align:center;
+            }
+
+        }
+
+
+         .navbar-custom {
+             background-color:#292D36;
+          }
+
+          .navbar-custom .nav-link {
+                    color: white;
+                     /* font-family:josefin sans; */
+                    font-family:made avenue personal use;
+           }
+
+          .dropdown .dropdown-menu .dropdown-item {
+            font-family:neusa next pro;
+          }
+
+
+
+
+        .navbar-custom .dropdown-menu {
+            background-color: #333;
+        }
+
+        .navbar-custom .dropdown-menu .dropdown-item {
+            color: white;
+        }
+
+        /* On hover, change the text color to #d7b27b */
+        .navbar-custom .dropdown-menu .dropdown-item:hover {
+            background-color: #d7b27b;
+        }
+
+
+/* second navbar style ends */
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-custom justify-content-center">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <a class="dropdown-item" href="{% url 'abt_us' %}">About</a>
+                <a class="dropdown-item" href="{% url 'our_people' %}">Our People</a>
+                <a class="dropdown-item" href="{% url 'mission' %}">Mission</a>
+                <a class="dropdown-item" href="{% url 'vision' %}">Vision</a>
+                <a class="dropdown-item" href="{% url 'word_from_ceo' %}">Word from CEO/Chairman</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'restaurants' %}">Brands</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'media_page' %}">Media</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'careers' %}">Careers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+
+<!--add this if navbar not working in your html -->
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+-->
+</body>
+</html>

@@ -1,0 +1,1607 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agthia</title>
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+
+
+
+
+        <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'sta/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/home_page.css' %}" type="text/css">
+
+    <style>
+
+
+        @font-face {
+  font-family:'made avenue personal use';
+  src: url('{% static 'sta/fonts/fonts/MADEAvenuePERSONALUSE-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'minion pro';
+  src: url('{% static 'sta/fonts/fonts/MinionPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'neusa next pro';
+  src: url('{% static 'sta/fonts/fonts/NeusaNextPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka bold';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Bold.otf' %}') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka variable';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Variable.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* Basic styling for the section under navbar */
+.section-background {
+    background-image: url('{% static 'sta1/images/background_image1.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: center;
+    text-align: left; /* Ensure text is left-aligned */
+    min-height: 65vh;
+    color: white;  /* White text for better contrast */
+    padding-left: 15px; /* Adjusted padding for smaller screens */
+}
+
+/* Styling for the inner divs to maintain left alignment */
+.section-background > div,
+.section-background > div > div,
+.section-background > div > div > div,
+.section-background > div > div > div > div {
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    text-align: left; /* Ensure text is left-aligned */
+    padding-left: 15px; /* Adjusted left padding for smaller screens */
+}
+
+/* Styling for h6 */
+.section-background h6 {
+    font-size: 1.2em; /* Reduced font size */
+    line-height: 1.2;
+    margin: 0 0 5px 0; /* Reduced top margin */
+    margin-top: -5vh;
+    font-family: 'Minion Pro', serif; /* Ensure font family is set */
+    letter-spacing: 0.05em; /* Increased character spacing */
+}
+
+/* Styling for span within h6 */
+.section-background h6 span {
+    color: #f1e3bd; /* Updated gold color for span */
+    font-family: 'Minion Pro', serif; /* Ensure font family is set */
+}
+
+/* Styling for p */
+.section-background p {
+    color: #c3c3c2;
+    line-height: 1.4;
+    margin: 0 0 5px 0; /* Reduced top margin */
+    font-size: 0.8em; /* Reduced font size */
+    font-family: 'Neusa Next Pro', sans-serif; /* Ensure font family is set */
+    letter-spacing: 0.05em; /* Increased character spacing */
+}
+
+/* Styling for button */
+.section-background button {
+    padding: 8px 30px;  /* Adjusted padding for button width */
+    font-size: 0.8em; /* Reduced font size */
+    cursor: pointer;
+    border: 1px solid #d7b27b;  /* Border color matching span */
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Neusa Next Pro', sans-serif; /* Ensure font family is set */
+    letter-spacing: 0.05em; /* Increased character spacing */
+}
+
+
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .section-background {
+        padding-left: 20px; /* Adjusted padding */
+    }
+    .section-background > div,
+    .section-background > div > div,
+    .section-background > div > div > div,
+    .section-background > div > div > div > div {
+        padding-left: 20px; /* Adjusted padding */
+    }
+    .section-background h6 {
+        font-size: 1.4em;
+    }
+    .section-background p {
+        font-size: 0.8em; /* Adjusted responsive font size */
+    }
+}
+
+@media (min-width: 768px) {
+    .section-background {
+        padding-left: 30px; /* Adjusted padding */
+    }
+    .section-background > div,
+    .section-background > div > div,
+    .section-background > div > div > div,
+    .section-background > div > div > div > div {
+        padding-left: 30px; /* Adjusted padding */
+    }
+    .section-background h6 {
+        font-size: 1.6em;
+    }
+    .section-background p {
+        font-size: 0.8em; /* Adjusted responsive font size */
+    }
+}
+
+@media (min-width: 992px) {
+    .section-background {
+        padding-left: 30px; /* Consistent padding */
+    }
+    .section-background > div,
+    .section-background > div > div,
+    .section-background > div > div > div,
+    .section-background > div > div > div > div {
+        padding-left: 30px; /* Consistent padding */
+    }
+    .section-background h6 {
+        font-size: 1.8em;
+    }
+    .section-background p {
+        font-size: 0.9em; /* Adjusted responsive font size */
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-background {
+        padding-left: 30px; /* Consistent padding */
+    }
+    .section-background > div,
+    .section-background > div > div,
+    .section-background > div > div > div,
+    .section-background > div > div > div > div {
+        padding-left: 30px; /* Consistent padding */
+    }
+    .section-background h6 {
+        font-size: 2em;
+    }
+    .section-background p {
+        font-size: 1em; /* Adjusted responsive font size */
+    }
+
+      .section-background button {
+        font-size: 1em; /* Adjusted responsive font size */
+    }
+}
+
+
+/* Basic styling for the section under navbar ends */
+
+
+
+
+
+
+/* about section */
+
+
+
+ .col-abt-txt h3 {
+        font-family:made avenue personal use;
+    }
+
+
+ .col-abt-txt p {
+        font-family:neusa next pro;
+    }
+
+
+@media (max-width: 767px) {
+    .col-hide-sm {
+        display: none;
+    }
+
+      .container-fluid img {
+        margin-top:15px;
+    }
+
+}
+
+.vertical-rule {
+    border-right: 1px solid #cdc6b9; /* Adjust the color and width as needed */
+}
+
+.col-custom {
+    flex: 0 0 5%; /* Adjust the width as needed */
+    max-width: 5%;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .col-md-4-first {
+        margin-left: 190px; /* Adjust the left margin as needed */
+        margin-top:60px;
+        margin-right:-2%;
+    }
+
+    .col-md-4-first img {
+         width: 100%; /* Ensure image width is 100% of its container */
+        height: auto; /* Maintain aspect ratio */
+        min-height: 650px; /* Set minimum height for the image */
+        object-fit: cover;
+        box-shadow: -10px 20px 15px rgba(0, 0, 0, 0.5);
+    }
+
+
+    .col-abt-txt {
+        flex: 0 0 35%; /* Adjust the width as needed */
+        margin-left: 2%;
+        margin-top: 122px;
+        font-size: 14px; /* Adjust the font size as needed */
+    }
+
+    .col-abt-txt p {
+        line-height: 1.2; /* Adjust the line height as needed */
+    }
+
+    .col-abt-txt h3 {
+        margin-bottom:5px;
+    }
+
+    .img-custom {
+        min-height: 500px; /* Adjust the height as needed */
+        object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+        margin-bottom: -100px; /* Allow the image to overflow at the bottom */
+    }
+
+    .container-fluid {
+        overflow: visible; /* Allow overflow to be visible */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+      .col-md-4-first {
+        margin-left: 130px; /* Adjust the left margin as needed */
+    }
+
+     #img_row .figure-box img, .caption {
+    margin-left:-60px;
+    }
+
+}
+
+
+
+
+/* brand image styles */
+
+.img-equal {
+    width: 100%; /* Set width to 100% to fill the container */
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.reduced-width-section {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .reduced-width-section {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reduced-width-section {
+        max-width: 80%;
+    }
+}
+
+/* Ensure the figure box and caption take up the same width */
+.figure-box {
+    width: 90%; /* Adjust to match .img-equal's original width */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.figcaption-border {
+    padding: 10px;
+    margin-top: 0px;
+    width: 100%; /* Ensure caption width matches the image */
+    text-align: left; /* Aligns the caption text to the left */
+    font-weight:bold;
+}
+
+     .top-recipe-button {
+    font-size:15px;
+    margin:3px;
+    border:2px solid #d7b27b;
+    padding:10px;
+    width:220px;
+    background:transparent;
+    /* font-family:josefin sans; */
+    font-family:neusa next pro;
+    margin-bottom:40px;
+    margin-top:40px;
+}
+
+
+/* brand image style ends here */
+
+
+
+.topnav {
+    /* font-family:josefin sans; */
+    font-family:made avenue personal use;
+    width:250px;
+}
+
+
+.top_rec_spad_hr {
+    margin-bottom:5px;
+}
+
+.top-recipe.spad {
+    background-color:white;
+    margin-top:20px;
+}
+
+
+ .top-recipe.spad > div:first-child  h6 {
+    /* font-family:josefin sans; */
+    font-family:neusa next pro;
+}
+
+  .top-recipe.spad > div:first-child  h4 {
+    /* font-family:cormorant; */
+        font-family:made avenue personal use;
+}
+
+
+  .top-recipe.spad > div:first-child  p {
+    /* font-family:josefin sans; */
+    font-family:neusa next pro;
+}
+
+
+
+/* book a table style */
+
+
+.top_recipe_sec1 {
+    padding-bottom: 110px;
+    position: relative;
+    background-image: url('{% static 'sta1/images/background_image2.jpeg' %}');
+    background-size: cover;
+    background-position: center;
+    height: auto; /* Set the height to cover the viewport height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-align: center; /* Center text in child elements */
+    padding: 20px;
+}
+
+
+.book_tabble {
+    background-color: rgba(235, 229, 213, 0.9); /* Slight transparency for background */
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: auto; /* Auto height to fit content */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+    overflow: hidden; /* Prevent overflow issues */
+    padding-top: 5%; /* Adjust padding-top */
+    letter-spacing: 0.3em;
+}
+
+.book_tabble h5, .book_tabble h3 {
+    text-align: center;
+    margin: 0; /* Remove default margins */
+    letter-spacing: 0.1em;
+}
+
+.book_tabble h5 {
+    font-family: 'neusa next pro';
+    margin-top: 0; /* Remove extra space */
+    letter-spacing: 0.3em;
+}
+
+.book_tabble h3 {
+    font-family: 'made avenue personal use';
+    margin-bottom: 0; /* Remove extra space */
+}
+
+
+.hr_two, .hr_one {
+    border: 0;
+    height: 1px;
+    background: #d7b27b;
+    width: 20%;
+    margin: 10px auto; /* Center and adjust spacing */
+}
+
+.hr_one {
+    margin-bottom: 5px; /* Ensure space between hr and heading */
+}
+
+.hr_two {
+    margin-top: 1px; /* Ensure space between hr and heading */
+}
+
+/* Form Styles */
+.book_form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%; /* Ensure form takes full width of the container */
+}
+
+.book_form input[type="text"], .book_form input[type="submit"] {
+    min-width: 150px; /* Minimum width for form elements */
+    max-width: calc(50% - 10px); /* Max width for form elements */
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.book_form input[type="submit"] {
+    width: 100%;
+    color: black;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px; /* Ensure it is on a new line */
+    /* font-family:josefin sans; */
+    font-family:neusa next pro;
+    background-color:white;
+}
+
+.book_form_input, .book_form_inputt, .book_form_inputtt {
+    background-color: #ebe5d5;
+    border: 1px solid #b4b0a9;
+}
+
+.book_form_inputtt {
+    font-family: neusa next pro;
+    background-color: white;
+}
+
+/* Placeholder Styles */
+.book_form_input::placeholder, .book_form_inputt::placeholder {
+    color: black;
+    font-weight: bold;
+    font-family: 'neusa next pro';
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .book_tabble {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        height: auto;
+        padding-top:8%;
+    }
+
+    .book_form {
+        width: 70%;
+    }
+
+    .book_form_input {
+        width: calc(50% - 5px); /* Increase width for Name and Email inputs */
+    }
+
+    .book_form_inputt {
+        width: calc(33.33% - 7px); /* Adjust width for Person, Timing, and Date inputs */
+    }
+
+    .book_form input[type="submit"] {
+        width: 100%; /* Full width for submit button */
+    }
+
+     .hr_two, .hr_one {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .book_tabble {
+        padding: 15px;
+    }
+
+    .book_form input[type="text"], .book_form input[type="submit"] {
+        width: 100%;
+        max-width: none;
+    }
+
+
+    .hr_two, .hr_one {
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+ .book_form input[type="text"], .book_form input[type="submit"] {
+        width: 100%;
+        max-width: none;
+        margin-left:5%;
+    }
+
+    .book_form input[type="text"] {
+        margin-left:10%;
+    }
+
+       .hr_two, .hr_one {
+        width: 60%;
+    }
+
+    #img_row {
+    margin-left:30%;
+    margin-bottom:5px;
+    }
+
+
+
+}
+
+
+@media (max-width: 480px) {
+    .book_tabble {
+        padding: 10px;
+    }
+
+    .hr_two, .hr_one {
+        width: 60%;
+    }
+}
+
+/* book a table style ends here */
+
+
+
+
+/* footer section */
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-section {
+    background-color: #1f232c;
+    padding: 10px 20px; /* Reduced padding */
+    color: white;
+    position: relative; /* Added to use absolute positioning within */
+}
+
+.footer-section .fs-left,
+.footer-section .subscribe-form,
+.footer-section .footer_mail {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer-section .footer_mail  p {
+    color:#d7b27b;
+}
+
+.footer-section .fs-left {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align by default */
+}
+
+.footer-section .fs-left p,
+.footer-section .subscribe-form p,
+.footer-section .footer_mail p {
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+}
+
+.footer-section .fs-left hr {
+    width: 65px;
+    border: none;
+    height: 2px;
+    background-color: #4c443a;
+    margin: 2px 0; /* Adjusted margin */
+}
+
+.footer-section .fs-left > .low-hr {
+    margin-bottom: -25px;
+}
+
+.footer-section .fs-left > .up-hr {
+    margin-top: 50px;
+}
+
+.footer-section .fs-left span {
+    font-size: 10px;
+    font-family: 'Neusa Next Pro', sans-serif;
+    letter-spacing: 3.5px;
+    margin: 2px 0; /* Adjusted margin */
+    margin-bottom: -4px;
+    margin-top: -2px;
+}
+
+.footer-section .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section .subscribe-form input[type="email"] {
+    border-color: #46484e;
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    padding: 5px; /* Reduced padding */
+}
+
+.footer-section .subscribe-form button {
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    padding: 5px 10px; /* Reduced padding */
+}
+
+.copyr_hr {
+    height: 2px; /* Ensure height is defined */
+    width: 100vw; /* Span the full viewport width */
+    background-color: #46484e; /* Make sure the color is defined correctly */
+    margin: 0; /* Remove any default margins */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align with the left edge */
+    margin-left: -20px;
+}
+
+.copyr_foo {
+    position: relative; /* Relative positioning for the parent container */
+    background-color: #1f232c;
+    padding: 5px 0; /* Reduced padding */
+    text-align: center; /* Center the content */
+}
+
+.copyright-text {
+    color: white;
+    font-size: 5px;
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    margin-top: -35px;
+    margin-bottom: -15px;
+    text-align: center; /* Center-align the text */
+}
+
+/* Flexbox Layout */
+.footer-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    position: relative;
+}
+
+.footer-section .subscribe-form input[type="email"]::placeholder {
+    color: #c8c9cb; /* Change this to your desired color */
+    opacity: 1; /* Ensure the color is not faded in some browsers */
+}
+
+
+.footer-section .fs-left,
+.footer-section .subscribe-form,
+.footer-section .footer_mail {
+    flex: 1 1 30%;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .footer-section .fs-left,
+    .footer-section .subscribe-form,
+    .footer-section .footer_mail {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Reduced margin */
+        align-items: center; /* Center-align on small screens */
+    }
+
+    .footer-section .subscribe-form input[type="email"],
+    .footer-section .subscribe-form button {
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin */
+        padding: 5px; /* Reduced padding */
+        height: 45px;
+    }
+
+    .footer-section .subscribe-form input[type="email"] {
+        text-align: center;
+    }
+
+    .footer-section .fs-left {
+        margin-left: 10%;
+    }
+}
+
+
+
+
+@media (width: 1200px) {
+
+     .footer-section .container {
+        justify-content: center; /* Center-align the container */
+    }
+
+     .footer-section .subscribe-form #subs-p {
+        margin-left:10%;
+    }
+
+     .footer-section .subscribe-form #subs-em {
+        margin-left:10%;
+    }
+
+ .footer-section .subscribe-form #subs-but {
+        width:70%;
+        margin-left:10%;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .footer-section .container {
+        justify-content: center; /* Center-align the container */
+    }
+
+    .footer-section .subscribe-form {
+        flex-direction: column; /* Change to column to place elements on top of each other */
+        justify-content: center; /* Center-align the form elements */
+        align-items: center;
+        margin-top:-4%;
+    }
+
+    .footer-section .subscribe-form p {
+        margin-bottom: 10px; /* Add some margin below the paragraph */
+        margin-left: -170%;
+    }
+
+    .footer-section .subscribe-form input[type="email"] {
+        margin-right: 0; /* Reset margin */
+        margin-left: -95%; /* Reset margin */
+        width: 70%; /* Full width */
+        height: 45px;
+        padding: 10px;
+    }
+
+    .footer-section .subscribe-form button {
+        margin: 0; /* Reset margin */
+        height: 45px;
+        width: 20%; /* Full width */
+        margin-left: -10%;
+    }
+
+    .footer-section .footer_mail {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        text-align: right;
+        margin-right:10%;
+        margin-top:3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section .footer_mail {
+        display: flex; /* Make it a flex container */
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Center align the items */
+    }
+
+    .footer-section .footer_mail p {
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text takes up full width for proper alignment */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-section .footer_mail {
+        display: flex; /* Make it a flex container */
+        align-items: center; /* Center align the items */
+        flex-direction: column; /* Align items vertically */
+    }
+
+    .footer-section .footer_mail p {
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text takes up full width for proper alignment */
+    }
+}
+
+
+@-moz-document url-prefix() {
+    .footer-section .fs-left p {
+        margin-top: 15px; /* Add top margin to ensure space between "CONTACT" and "AL-SHARQIA TOWER" */
+    }
+
+    .footer-section .fs-left hr.low-hr {
+        margin-bottom: 5px; /* Ensure space between hr and p */
+    }
+}
+
+
+/* footer section ends */
+
+
+
+ /* copied from python anywhere */
+
+ /*
+
+@media screen and (max-width: 720px) and (max-height:720px) {
+
+    .pt-recipe-udiv {
+        width:35vh;
+        margin-left:-2vh;
+        margin-top:5vh;
+    }
+
+    .about_section {
+        margin-top:-12vh;
+    }
+
+
+      .about_sect_one {
+            margin-left:-3vh;
+        }
+
+        .about_sect_one img {
+            width:25vh;
+        }
+
+         .about_sect_four {
+        width:24vh;
+        margin-left:4vh;
+    }
+
+
+
+
+     .top-recipe.spad p {
+        width:40vh;
+    }
+
+
+    .image-row {
+        width:60vh;
+    }
+
+    #img_row {
+        margin-left:-1vh;
+    }
+
+    #b_tab {
+        margin-left:4vh;
+        height:100vh;
+    }
+
+    #b_tab .hr_one {
+        margin-left:15.5vh;
+        width:18vh;
+    }
+
+    #b_tab .hr_two {
+        margin-left:15.5vh;
+        width:18vh;
+    }
+
+    .row.rowz {
+        margin-left:-8vh;
+    }
+
+      .row1 button {
+        width: 43vh;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 720px) and (min-height:721px) and (max-height:788px){
+    #p_rec_ud {
+        width:35vh;
+        margin-left:0vh;
+        margin-top:5vh;
+    }
+
+    .about_section {
+        margin-top:-12vh;
+        width:50vh;
+    }
+
+
+      .about_sect_one {
+            margin-left:-3vh;
+            width:29vh;
+        }
+
+        .about_sect_one img {
+            width:23vh;
+        }
+
+         .about_sect_four {
+        width:20vh;
+        margin-left:5vh;
+    }
+
+    .image-row {
+        width:60vh;
+    }
+
+    #img_row {
+        margin-left:0vh;
+    }
+
+    #b_tab {
+        margin-left:4vh;
+        height:100vh;
+    }
+
+    #b_tab .hr_one {
+        margin-left:12vh;
+        width:18vh;
+    }
+
+    #b_tab .hr_two {
+        margin-left:12vh;
+        width:18vh;
+    }
+
+    .row.rowz {
+        margin-left:-4vh;
+    }
+
+      .row1 button {
+        width: 36vh;
+    }
+
+
+     .footer-section .subscribe-form input[type="email"] {
+        width: 35.5vh;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 720px) and (min-height:665px) and (max-height:675px){
+    #pt-recip-ud {
+        width:35vh;
+        margin-left:5vh;
+        margin-top:5vh;
+    }
+
+       .about_sect_four {
+        width:20vh;
+        margin-left:7vh;
+    }
+
+
+    #about .about_sect_one.about_sect_onee {
+        width:20vh;
+    }
+
+
+    #about .about_sect_one.about_sect_onee img {
+        height:150vh;
+    }
+
+
+    .about_section {
+        height:145vh;
+    }
+
+     #b_tab {
+        margin-left:2.5vh;
+        height:110vh;
+    }
+
+
+    .book_form_inputtt {
+        margin-left:0vh;
+    }
+
+
+     .row1 button {
+        margin-left:5vh;
+        width:42vh;
+    }
+
+
+     .footer-section .subscribe-form input[type="email"] {
+        margin-left:5vh;
+    }
+
+
+}
+
+
+*/
+
+
+
+/* latest navbar style */
+
+
+@media screen and (min-width: 576px) {
+
+    .navbar-custom .nav-item {
+        margin-right: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 575px) {
+
+    .navbar-custom .nav-item {
+        margin-left: 25px;
+    }
+
+}
+
+
+ .navbar-custom {
+     background-color:#292D36;
+  }
+
+  .navbar-custom .nav-link {
+            color: white;
+             /* font-family:josefin sans; */
+            font-family:made avenue personal use;
+   }
+
+
+
+
+
+/* pop-up style */
+
+.modal-body button {
+    border:2px solid #d7b27b;
+    width:40%;
+    font-family:made avenue personal use;
+}
+
+
+.modal-body h5 {
+    font-family:neusa next pro;
+}
+
+
+#hr_logo {
+    border-color: yellow;
+    color:yellow;
+    background-color: yellow;
+    width:100%;
+    margin:0px;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+
+        <div class="container" align="center">
+
+            <div class="logo">
+                <a href="{% url 'home' %}"><img  src="{% static 'sta1/images/logo_agthia.jpg' %}"></a>
+            </div><br>
+    </header>
+    <hr id="hr_logo">
+
+    <!--
+    <header class="header-nav">
+                <div class="nav-container">
+                    <div class="nav-menu">
+                        <nav class="main-menu mobile-menu">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'home' %}">About</a>
+                                </li>
+
+                                  <li>
+                                    <a href="{% url 'restaurants' %}">Restaurants</a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'reservation' %}">Reservation</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+    </header>
+    -->
+    <!-- Header End -->
+
+
+
+
+<!-- old navbar begins -->
+<!--
+<section class="header-nav">
+<div class="topnav" id="myTopnav">
+  <a href="{% url 'home' %}">Home</a>
+  <a href="{% url 'abt_us' %}">About Us</a>
+  <a href="{% url 'restaurants' %}">Brands</a>
+  -->
+    <!--
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+  -->
+    <!--
+  <a href="{% url 'media_page' %}">Media</a>
+  <a href="{% url 'careers' %}">Careers</a>
+  <a href="{% url 'contact' %}">Contact Us</a>
+
+   {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Logout</a>
+    {% endif %}
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</section>
+-->
+<!-- old navbar ends -->
+
+
+<nav class="navbar navbar-expand-sm navbar-custom justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutUsModal">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'restaurants' %}">Brands</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'media_page' %}">Media</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'careers' %}">Careers</a>
+      </li>
+
+
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+    </ul>
+</nav>
+
+
+
+
+
+<!-- About Us Modal -->
+<div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutUsModalLabel">About Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column align-items-center">
+            <!--
+          <button type="button" class="btn btn-primary mb-2"  onclick="location.href='{% url 'abt_us' %}'">About</button>
+          <button type="button" class="btn btn-secondary mb-2" onclick="location.href='{% url 'our_people' %}'">Our People</button>
+          <button type="button" class="btn btn-success mb-2" onclick="location.href='{% url 'mission' %}'">Mission</button>
+          <button type="button" class="btn btn-danger mb-2" onclick="location.href='{% url 'vision' %}'">Vision</button>
+          <button type="button" class="btn btn-warning mb-2" onclick="location.href='{% url 'word_from_ceo' %}'">Word from CEO/Chairman</button>
+          -->
+
+           <button type="button" class="btn mb-2"  onclick="location.href='{% url 'abt_us' %}'">About</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'our_people' %}'">Our People</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'mission' %}'">Mission</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'vision' %}'">Vision</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'word_from_ceo' %}'">Word from CEO/Chairman</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Page Top Recipe Section Begin -->
+<section class="section-background">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <h6>EVERY DISH IS A<br> CHAPTER, AND EVERY <br>CONCEPT UNFOLDS <span>A NEW <br>CULINARY ADVENTURE.</span></h6><br>
+                        <p>Every dish is a chapter. And every concept unfolds a new <br>culinary adventure. Every dish is a chapter.</p><br>
+                        <button onclick="location.href='#reservatt'">For Reservations</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Page Top Recipe Section End -->
+
+
+
+
+<!-- Top Recipe Section0 Begin -->
+<!--
+<section class="about-section">
+    <div class="image-container">
+        <img src="{% static 'sta1/images/new_2.jpeg' %}" alt="About Us Image">
+    </div>
+    <div class="text-content">
+        <h3>About</h3>
+        <p>Agthia-Food Company is a family of unique food concepts that are built on sustainability and delicate culinary excellence.</p>
+        <p>We strive to provide everyone with affordable and high-quality food with a promise to sustain better
+        human health and the environment, which will make a difference for generations to come.</p>
+        <h3>Our People</h3>
+        <p>With more than 800+ employees, we would not be where we are today without the efforts of our employees.
+         Our senior management that holds internationally recognized professionals in all functions, continues to
+         drive our dynamic and collaborative organization. We have faith in diversity of personalities, experiences,
+         and backgrounds as conducive to involve and leads to more innovative working lives.</p>
+    </div>
+</section>
+-->
+
+<!-- Top Recipe Section0 End -->
+
+
+ <div class="container-fluid" style="background-color:#f3eddf">
+        <div class="row">
+            <div class="col-md-4 col-12 col-md-4-first">
+                <img src="{% static 'sta1/images/new_3.jpeg' %}" class="img-custom" alt="About Us Image">
+            </div>
+            <div class="col-md-1 col-12 col-hide-sm vertical-rule col-custom" style="margin-top:9%;margin-bottom:9%"></div>
+            <div class="col-md-7 col-12 col-abt-txt">
+                <h3>About</h3>
+                {% for t in abb %}
+                <p>{{t.description}}</p>
+                <p style="margin-bottom:50px">{{t.description1}}</p>
+                {% endfor %}
+                <h3>Our People</h3>
+                {% for k in o_p %}
+                <p>{{k.description}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Top Recipe Section Begin --><br><br><br><br><br><br>
+<section class="text-center reduced-width-section">
+    <hr style="border-color:#d7b27b; width: 180px; margin: 0 auto; margin-bottom:3px">
+    <h6 style="margin-bottom:-3px;font-family:neusa next pro; color:black; letter-spacing: 0.1em;">RESTAURANTS</h6>
+    <hr style="border-color:#d7b27b; width: 180px; margin: 0 auto;margin-bottom:8px;">
+    <h4 style="font-family:made avenue personal use;letter-spacing: 0.08em;">LOCAL BRANDS</h4><br>
+    <p style="font-family:neusa next pro;">Every dish is a chapter. And every concept unfolds a new <br>culinary adventure. Every dish is a chapter.</p><br>
+
+    <div class="row justify-content-center">
+        {% for i in lockk %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="figure-box">
+                <img src="{{i.image.url}}" alt="Image 1" class="img-fluid img-equal">
+                <figcaption class="figcaption-border" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.14);
+                font-family:minion pro;;border:1px transparent #8c734f;">{{i.name}}</figcaption>
+            </div>
+        </div>
+        {% endfor %}
+    </div><br><br>
+
+    <h4 style="font-family:made avenue personal use;letter-spacing: 0.08em;">INTERNATIONAL BRANDS</h4><br>
+    <p style="font-family:neusa next pro;">Every dish is a chapter. And every concept unfolds a new <br>culinary adventure. Every dish is a chapter.</p><br>
+
+    <div class="row justify-content-center">
+        {% for k in interk %}
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="figure-box">
+                <img src="{{k.image.url}}" alt="Image 1" class="img-fluid img-equal">
+                <figcaption class="figcaption-border" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.14);
+                font-family:minion pro;;border:1px transparent #8c734f;">{{k.name}}</figcaption>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <button onclick="location.href='{% url 'restaurants' %}'" class="top-recipe-button">View Restaurants</button>
+</section>
+
+    <!-- Top Recipe Section End -->
+
+
+
+
+
+
+    <!-- Categories Filter Section Begin -->
+
+    <!-- Categories Filter Section End -->
+
+
+
+
+
+
+    <!-- Feature Recipe Section Begin -->
+    <!-- Feature Recipe Section End -->
+
+
+
+
+
+
+
+
+       <!-- Top Recipe Section1 Begin -->
+<section class="top_recipe_sec1" id="reservatt">
+    <div class="book_tabble" id="b_tab">
+        <hr class="hr_one">
+        <h5>RESERVATION</h5>
+        <hr class="hr_two">
+        <h3><b>BOOK YOUR TABLE NOW</b></h3>
+        <form class="book_form" method="post" action="{% url 'book_table' %}">
+            {% csrf_token %}
+            <input class="book_form_input" type="text" name="nam" placeholder="Name">
+            <input class="book_form_input" type="text" name="emm" placeholder="Email">
+            <input class="book_form_inputt" type="text" name="count" placeholder="Person">
+            <input class="book_form_inputt" type="text" name="dat" placeholder="Timing">
+            <input class="book_form_inputt" type="text" name="tim" placeholder="Date">
+            <div align="center">
+                <input class="book_form_inputtt" type="submit" value="Book a Table">
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+    <!-- Top Recipe Section0 End -->
+
+
+
+
+
+
+
+
+<!-- Footer Section Begin -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="fs-left">
+            <hr class="up-hr">
+            <span style="color:#c8c9cb">CONTACT</span>
+            <hr class="low-hr"><br><br>
+            <p style="color:#c8c9cb">AL-SHARQIA TOWER<br>
+            FLOOR 7<br>
+            JABER AL MUBARAK<br>
+            STREET, BLOCK 2<br>
+            KUWAIT CITY</p>
+        </div>
+        <div class="subscribe-form">
+            <form action="{% url 'cust_subscr' %}">
+                {% csrf_token %}
+                <p id="subs-p" style="color:#c8c9cb">Join our mailing list for updates.<br>Get news & other events</p>
+                <input id="subs-em" type="email"  name="emm" placeholder="Email" required>
+                <button id="subs-but" type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer_mail">
+            <p>2226045<br>
+            INFO@AGTHIA-FOOD.COM</p>
+        </div>
+    </div>
+    <div class="copyr_foo">
+        <div class="copyr_hr"></div>
+        <p class="copyright-text">© Copyright</p>
+    </div>
+</footer>
+
+<!-- Footer Section End -->
+
+
+    <!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search model end -->
+
+
+
+    <!-- Js Plugins -->
+    <script src="{% static 'sta/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'sta/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'sta/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'sta/js/main.js' %}"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var menuItems = document.querySelectorAll(".main-menu > ul > li");
+
+    menuItems.forEach(function(item) {
+        item.addEventListener("click", function(event) {
+            var submenu = this.querySelector(".sub-menu");
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+            event.stopPropagation();
+        });
+    });
+
+    // Close the submenu if clicked outside
+    document.addEventListener("click", function(event) {
+        var submenus = document.querySelectorAll(".sub-menu");
+        submenus.forEach(function(submenu) {
+            if (submenu.style.display === "block" && !submenu.parentNode.contains(event.target)) {
+                submenu.style.display = "none";
+            }
+        });
+    });
+});
+
+</script>
+
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  var pageTopRecipe = document.querySelector(".page-top-recipe");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    pageTopRecipe.classList.add("margin-top-500");
+  } else {
+    x.className = "topnav";
+    pageTopRecipe.classList.remove("margin-top-500");
+  }
+}
+</script>
+
+
+<script>
+    {% if messages %}
+        {% for msg in messages %}
+                alert("{{ msg }}");
+        {% endfor %}
+    {% endif %}
+</script>
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

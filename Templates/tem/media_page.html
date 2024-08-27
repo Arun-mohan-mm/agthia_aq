@@ -1,0 +1,1059 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agthia</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
+
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+        <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'sta/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'sta/css/contact.css' %}" type="text/css">
+
+    <style>
+
+
+
+           @font-face {
+  font-family:'made avenue personal use';
+  src: url('{% static 'sta/fonts/fonts/MADEAvenuePERSONALUSE-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'minion pro';
+  src: url('{% static 'sta/fonts/fonts/MinionPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'neusa next pro';
+  src: url('{% static 'sta/fonts/fonts/NeusaNextPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka bold';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Bold.otf' %}') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka variable';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Variable.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+        .header-nav {
+          min-height:10vh;
+        }
+
+
+
+           .pt-recipe-udiv button {
+        border:1px solid #8c734f;
+        }
+
+
+           .topnav {
+            /* font-family:josefin sans; */
+            font-family:made avenue personal use;
+        }
+
+
+        .pt-recipe-udiv h3 {
+               /* font-family:times new roman; */
+            font-family:minion pro;
+        }
+
+
+        .pt-recipe-udiv h6 {
+             /* font-family:josefin sans; */
+             font-family:neusa next pro;
+        }
+
+
+
+
+        .pt-recipe-udiv button {
+            border:2px solid #d7b27b;
+             /* font-family:josefin sans; */
+            font-family:neusa next pro;
+            padding:10px;
+            width:200px;
+        }
+
+
+
+         .pt-recipe-span {
+            color:#f1e3bd;
+        }
+
+
+
+         .top-recipe-button {
+            font-size:15px;
+            border:2px solid #d7b27b;
+            padding:10px;
+            width:220px;
+            background:transparent;
+              /* font-family:josefin sans; */
+            font-family:neusa next pro;
+        }
+
+
+        .top_rec_spad_hr {
+            margin-bottom:5px;
+        }
+
+
+         .top-recipe.spad > div:first-child  h6 {
+              /* font-family:josefin sans; */
+            font-family:neusa next pro;
+        }
+
+          .top-recipe.spad > div:first-child  h4 {
+              /* font-family:cormorant; */
+                font-family:made avenue personal use;
+        }
+
+
+          .top-recipe.spad > div:first-child  p {
+            /* font-family:josefin sans; */
+            font-family:neusa next pro;
+        }
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #292D36;
+  overflow: hidden;
+  width:590px;
+  margin-left:410px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+      .topnav {
+        margin-left:-5px;
+        margin-right:-5px;
+        width:auto;
+        background-color:#292D36;
+      }
+
+
+      .margin-top-500 {
+        margin-top: 222px;
+    }
+
+
+
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+
+}
+
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+
+  .topnav.responsive {
+  position: relative;
+  background-color:#292D36;
+  }
+
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+
+}
+
+
+
+/* footer section */
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.footer-section {
+    background-color: #1f232c;
+    padding: 10px 20px; /* Reduced padding */
+    color: white;
+    position: relative; /* Added to use absolute positioning within */
+}
+
+.footer-section .fs-left,
+.footer-section .subscribe-form,
+.footer-section .footer_mail {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer-section .footer_mail  p {
+    color:#d7b27b;
+}
+
+.footer-section .fs-left {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align by default */
+}
+
+.footer-section .fs-left p,
+.footer-section .subscribe-form p,
+.footer-section .footer_mail p {
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+}
+
+.footer-section .fs-left hr {
+    width: 65px;
+    border: none;
+    height: 2px;
+    background-color: #4c443a;
+    margin: 2px 0; /* Adjusted margin */
+}
+
+.footer-section .fs-left > .low-hr {
+    margin-bottom: -25px;
+}
+
+.footer-section .fs-left > .up-hr {
+    margin-top: 50px;
+}
+
+.footer-section .fs-left span {
+    font-size: 10px;
+    font-family: 'Neusa Next Pro', sans-serif;
+    letter-spacing: 3.5px;
+    margin: 2px 0; /* Adjusted margin */
+    margin-bottom: -4px;
+    margin-top: -2px;
+}
+
+.footer-section .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section .subscribe-form input[type="email"] {
+    border-color: #46484e;
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    padding: 5px; /* Reduced padding */
+}
+
+.footer-section .subscribe-form button {
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    padding: 5px 10px; /* Reduced padding */
+}
+
+.copyr_hr {
+    height: 2px; /* Ensure height is defined */
+    width: 100vw; /* Span the full viewport width */
+    background-color: #46484e; /* Make sure the color is defined correctly */
+    margin: 0; /* Remove any default margins */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align with the left edge */
+    margin-left: -20px;
+}
+
+.copyr_foo {
+    position: relative; /* Relative positioning for the parent container */
+    background-color: #1f232c;
+    padding: 5px 0; /* Reduced padding */
+    text-align: center; /* Center the content */
+}
+
+.copyright-text {
+    color: white;
+    font-size: 5px;
+    font-family: 'Neusa Next Pro', sans-serif;
+    margin: 5px 0; /* Reduced margin */
+    margin-top: -35px;
+    margin-bottom: -15px;
+    text-align: center; /* Center-align the text */
+}
+
+/* Flexbox Layout */
+.footer-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    position: relative;
+}
+
+.footer-section .subscribe-form input[type="email"]::placeholder {
+    color: #c8c9cb; /* Change this to your desired color */
+    opacity: 1; /* Ensure the color is not faded in some browsers */
+}
+
+
+.footer-section .fs-left,
+.footer-section .subscribe-form,
+.footer-section .footer_mail {
+    flex: 1 1 30%;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .footer-section .fs-left,
+    .footer-section .subscribe-form,
+    .footer-section .footer_mail {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Reduced margin */
+        align-items: center; /* Center-align on small screens */
+    }
+
+    .footer-section .subscribe-form input[type="email"],
+    .footer-section .subscribe-form button {
+        width: 100%;
+        margin-bottom: 10px; /* Reduced margin */
+        padding: 5px; /* Reduced padding */
+        height: 45px;
+    }
+
+    .footer-section .subscribe-form input[type="email"] {
+        text-align: center;
+    }
+
+    .footer-section .fs-left {
+        margin-left: 10%;
+    }
+}
+
+
+
+
+@media (width: 1200px) {
+
+     .footer-section .container {
+        justify-content: center; /* Center-align the container */
+    }
+
+     .footer-section .subscribe-form #subs-p {
+        margin-left:10%;
+    }
+
+     .footer-section .subscribe-form #subs-em {
+        margin-left:10%;
+    }
+
+ .footer-section .subscribe-form #subs-but {
+        width:70%;
+        margin-left:10%;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .footer-section .container {
+        justify-content: center; /* Center-align the container */
+    }
+
+    .footer-section .subscribe-form {
+        flex-direction: column; /* Change to column to place elements on top of each other */
+        justify-content: center; /* Center-align the form elements */
+        align-items: center;
+        margin-top:-4%;
+    }
+
+    .footer-section .subscribe-form p {
+        margin-bottom: 10px; /* Add some margin below the paragraph */
+        margin-left: -170%;
+    }
+
+    .footer-section .subscribe-form input[type="email"] {
+        margin-right: 0; /* Reset margin */
+        margin-left: -95%; /* Reset margin */
+        width: 70%; /* Full width */
+        height: 45px;
+        padding: 10px;
+    }
+
+    .footer-section .subscribe-form button {
+        margin: 0; /* Reset margin */
+        height: 45px;
+        width: 20%; /* Full width */
+        margin-left: -10%;
+    }
+
+    .footer-section .footer_mail {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        text-align: right;
+        margin-right:10%;
+        margin-top:3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section .footer_mail {
+        display: flex; /* Make it a flex container */
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Center align the items */
+    }
+
+    .footer-section .footer_mail p {
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text takes up full width for proper alignment */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-section .footer_mail {
+        display: flex; /* Make it a flex container */
+        align-items: center; /* Center align the items */
+        flex-direction: column; /* Align items vertically */
+    }
+
+    .footer-section .footer_mail p {
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text takes up full width for proper alignment */
+    }
+}
+
+
+
+
+/* footer section ends */
+
+
+/* Media style */
+
+
+main {
+    padding: 20px;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    font-family:made avenue personal use;
+}
+
+article {
+    margin-bottom: 15px;
+}
+
+article h3 {
+    font-family:made avenue personal use;
+}
+
+article p {
+    font-family:neusa next pro;
+}
+
+.photo-gallery, .video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.video-gallery {
+    font-family:neusa next pro;
+}
+
+.photo-gallery img, .video-gallery video {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .photo-gallery img, .video-gallery video {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* latest navbar style */
+
+.navbar-custom .nav-item {
+    margin-right: 20px;
+}
+
+ .navbar-custom {
+     background-color:#292D36;
+  }
+
+  .navbar-custom .nav-link {
+            color: white;
+             /* font-family:josefin sans; */
+            font-family:made avenue personal use;
+   }
+
+
+
+/* pop-up style */
+
+.modal-body button {
+    border:2px solid #d7b27b;
+    width:40%;
+    font-family:made avenue personal use;
+}
+
+
+.modal-body h5 {
+    font-family:neusa next pro;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+
+        <div class="container" align="center">
+
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'sta1/images/logo_agthia.jpg' %}" alt=""></a>
+            </div><br>
+    </header>
+    <hr>
+
+
+
+    <!--
+    <header class="header-nav">
+                <div class="nav-container">
+                    <div class="nav-menu">
+                        <nav class="main-menu mobile-menu">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'home' %}">About</a>
+                                </li>
+
+                                  <li>
+                                    <a href="{% url 'restaurants' %}">Restaurants</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#">Restaurants <span style="font-size:8px;">▼</span></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#">About Me</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Categories</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Recipe</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <a href="{% url 'reservation' %}">Reservation</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            <div id="mobile-menu-wrap"></div>
+    </header>
+    -->
+    <!-- Header End -->
+
+
+
+
+
+<!-- old navbar begins -->
+<!--
+<section class="header-nav">
+        <div class="topnav" id="myTopnav">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'abt_us' %}">About Us</a>
+          <a href="{% url 'restaurants' %}">Brands</a>
+          -->
+            <!--
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          -->
+    <!--
+          <a href="{% url 'media_page' %}">Media</a>
+          <a href="{% url 'careers' %}">Careers</a>
+          <a href="{% url 'contact' %}">Contact Us</a>
+
+           {% if user.is_authenticated %}
+           <a href="{% url 'logout' %}">Logout</a>
+          {% endif %}
+
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+</section>
+-->
+<!-- old navbar ends -->
+
+
+
+
+<nav class="navbar navbar-expand-sm navbar-custom justify-content-center">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutUsModal">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'restaurants' %}">Brands</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'media_page' %}">Media</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'careers' %}">Careers</a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+
+    </ul>
+</nav>
+
+
+
+
+<!-- About Us Modal -->
+<div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutUsModalLabel">About Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column align-items-center">
+            <!--
+          <button type="button" class="btn btn-primary mb-2"  onclick="location.href='{% url 'abt_us' %}'">About</button>
+          <button type="button" class="btn btn-secondary mb-2" onclick="location.href='{% url 'our_people' %}'">Our People</button>
+          <button type="button" class="btn btn-success mb-2" onclick="location.href='{% url 'mission' %}'">Mission</button>
+          <button type="button" class="btn btn-danger mb-2" onclick="location.href='{% url 'vision' %}'">Vision</button>
+          <button type="button" class="btn btn-warning mb-2" onclick="location.href='{% url 'word_from_ceo' %}'">Word from CEO/Chairman</button>
+          -->
+
+           <button type="button" class="btn mb-2"  onclick="location.href='{% url 'abt_us' %}'">About</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'our_people' %}'">Our People</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'mission' %}'">Mission</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'vision' %}'">Vision</button>
+          <button type="button" class="btn mb-2" onclick="location.href='{% url 'word_from_ceo' %}'">Word from CEO/Chairman</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <main>
+        <section id="news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>News Title 1</h3>
+                <p>Summary of the news article goes here...</p>
+            </article>
+            <article>
+                <h3>News Title 2</h3>
+                <p>Summary of the news article goes here...</p>
+            </article>
+        </section>
+
+
+     <!--
+
+        <section id="photos">
+            <h2>Photos</h2>
+            <div class="photo-gallery">
+                <img src="photo1.jpg" alt="Photo 1">
+                <img src="photo2.jpg" alt="Photo 2">
+                <img src="photo3.jpg" alt="Photo 3">
+            </div>
+        </section>
+
+        <section id="videos">
+            <h2>Videos</h2>
+            <div class="video-gallery">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        -->
+ </main>
+
+
+    <!-- Categories Filter Section Begin -->
+
+    <!-- Categories Filter Section End -->
+
+
+
+
+
+
+    <!-- Feature Recipe Section Begin -->
+    <!-- Feature Recipe Section End -->
+
+
+
+
+
+
+
+    <!-- Footer Section Begin -->
+   <footer class="footer-section">
+    <div class="container">
+        <div class="fs-left">
+            <hr class="up-hr">
+            <span style="color:#c8c9cb">CONTACT</span>
+            <hr class="low-hr"><br><br>
+            <p style="color:#c8c9cb">AL-SHARQIA TOWER<br>
+            FLOOR 7<br>
+            JABER AL MUBARAK<br>
+            STREET, BLOCK 2<br>
+            KUWAIT CITY</p>
+        </div>
+        <div class="subscribe-form">
+            <form action="{% url 'cust_subscr' %}">
+                {% csrf_token %}
+                <p id="subs-p" style="color:#c8c9cb">Join our mailing list for updates.<br>Get news & other events</p>
+                <input id="subs-em" type="email"  name="emm" placeholder="Email" required>
+                <button id="subs-but" type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer_mail">
+            <p>2226045<br>
+            INFO@AGTHIA-FOOD.COM</p>
+        </div>
+    </div>
+    <div class="copyr_foo">
+        <div class="copyr_hr"></div>
+        <p class="copyright-text">© Copyright</p>
+    </div>
+</footer>
+    <!-- Footer Section End -->
+
+
+    <!-- Search model -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search model end -->
+
+
+
+    <!-- Js Plugins -->
+    <script src="{% static 'sta/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'sta/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'sta/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'sta/js/mixitup.min.js' %}"></script>
+    <script src="{% static 'sta/js/main.js' %}"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var menuItems = document.querySelectorAll(".main-menu > ul > li");
+
+    menuItems.forEach(function(item) {
+        item.addEventListener("click", function(event) {
+            var submenu = this.querySelector(".sub-menu");
+            if (submenu.style.display === "block") {
+                submenu.style.display = "none";
+            } else {
+                submenu.style.display = "block";
+            }
+            event.stopPropagation();
+        });
+    });
+
+    // Close the submenu if clicked outside
+    document.addEventListener("click", function(event) {
+        var submenus = document.querySelectorAll(".sub-menu");
+        submenus.forEach(function(submenu) {
+            if (submenu.style.display === "block" && !submenu.parentNode.contains(event.target)) {
+                submenu.style.display = "none";
+            }
+        });
+    });
+});
+
+</script>
+
+
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  var pageTopRecipe = document.querySelector(".page-top-recipe");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    pageTopRecipe.classList.add("margin-top-500");
+  } else {
+    x.className = "topnav";
+    pageTopRecipe.classList.remove("margin-top-500");
+  }
+}
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+<style>
+
+
+    @font-face {
+  font-family:'made avenue personal use';
+  src: url('{% static 'sta/fonts/fonts/MADEAvenuePERSONALUSE-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'minion pro';
+  src: url('{% static 'sta/fonts/fonts/MinionPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'neusa next pro';
+  src: url('{% static 'sta/fonts/fonts/NeusaNextPro-Regular.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka bold';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Bold.otf' %}') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pp cirka variable';
+  src: url('{% static 'sta/fonts/fonts/PPCirka-Variable.otf' %}') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 81px 150px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+
+.logo img {
+    width:160px;
+	height:110px;
+}
+
+.toggle-bar {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 210px;
+    right: 40px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius:5px;
+}
+
+.admin-logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.admin-logo img {
+    width:100px;
+    height:100px;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+
+
+.table-section, .edit-section {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 0px 0;
+    background-color: #1f232c;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    width: 100%;
+    color:white;
+}
+
+
+/* Manage content style */
+
+/* Hero Section */
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.hero h1 {
+    font-family: made avenue personal use;
+    font-size:40px;
+}
+
+.hero-hr {
+    border-color: #d7b27b;
+    width: 330px;
+    margin: 1vh auto; /* Center the HR element */
+}
+
+/* Job Listings Section */
+.job-listings {
+    padding: 2em;
+    max-width: 300px; /* Reduce the width */
+    margin: 0 auto; /* Center the section */
+}
+
+.job-listings h6 {
+    font-family: neusa next pro;
+    color: black;
+    margin:0 auto;
+}
+
+.listing-hr {
+    border-color: #d7b27b;
+    width: 79px;
+    margin: 1vh 0; /* Adjust margins as needed */
+}
+
+.job {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.apply-btn {
+    background-color: transparent;
+    border: 2px solid #d7b27b;
+    width: 100%;
+    color: black;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-family: neusa next pro;
+    margin-bottom: 2px;
+}
+
+/* Responsive career listing Styles */
+@media (max-width: 768px) {
+    .job-listings {
+        padding: 1em;
+        margin-left: 0; /* Reset left margin on smaller screens */
+        overflow-x: auto; /* Add horizontal scrollbar */
+    }
+
+    .job {
+        padding: 0.5em;
+        min-width: 200px; /* Ensure job items don't shrink too small */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .job-listings {
+        overflow-x: auto; /* Add horizontal scrollbar */
+    }
+
+    .contai {
+        width: 80%; /* Increase width on medium screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .job {
+        min-width: 200px; /* Ensure job items don't shrink too small */
+    }
+}
+
+/* Adjust width of .contai on small and medium screens */
+@media (max-width: 768px) {
+    .contai {
+        width: 90%; /* Increase width on small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* Manage content style ends */
+
+@media (min-width: 1500px) {
+
+     .job-listings {
+       margin:0 auto;
+    }
+
+    main {
+        max-width: 1400px; /* Adjust this value as needed */
+        margin: 0 auto; /* Center the main content */
+    }
+
+
+    .footer-section .container {
+        max-width: 1400px; /* Ensure the footer aligns with the main content */
+        margin: 0 auto; /* Center the footer content */
+    }
+}
+
+</style>
+
+
+</head>
+<body>
+    <div class="page-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'sta1/images/logo_agthia.jpg' %}" alt=""></a>
+            </div>
+            <div class="toggle-bar" onclick="togglePopup()">☰</div>
+        </div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <div class="admin-logo">
+                <img src="{% static 'sta1/images/admin_logo.jpg' %}" alt="">
+            </div>
+            <div class="buttons">
+                <button>Button 1</button>
+                <button>Button 2</button>
+            </div>
+        </div>
+
+
+<main>
+         <section class="hero">
+            <h1>Manage content</h1>
+            <hr class="hero-hr">
+        </section>
+
+    <section class="job-listings">
+
+        <div class="job">
+
+            <hr class="listing-hr">
+                <h6>Manage content</h6>
+            <hr class="listing-hr">
+
+            <button class="apply-btn" onclick="location.href='{% url 'about_adm' %}'">About</button>
+             <button class="apply-btn" onclick="location.href='{% url 'our_ple_adm' %}'">Our People</button>
+             <button class="apply-btn" onclick="location.href='{% url 'mission_adm' %}'">Mission</button>
+             <button class="apply-btn" onclick="location.href='{% url 'vision_adm' %}'">Vision</button>
+             <button class="apply-btn" onclick="location.href='{% url 'word_ceo_adm' %}'">Word from CEO/Chairman</button>
+              <button class="apply-btn" onclick="location.href='{% url 'news_adm' %}'">Media</button>
+             <button class="apply-btn" onclick="location.href='{% url 'mnge_restaurants_adm' %}'">Manage Restaurants</button>
+              <button class="apply-btn" onclick="location.href='{% url 'view_subscr_adm' %}'">Subscriptions</button>
+             <button class="apply-btn" onclick="location.href='{% url 'contact_us_adm' %}'">Contact us</button>
+        </div>
+    </section>
+</main>
+
+        <!-- Footer -->
+        <footer>
+            <p style="color: #c8c9cb;">©Copyright</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+
+<script>
+    function togglePopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+}
+
+function showTable() {
+    document.getElementById('table-section').style.display = 'block';
+    document.getElementById('edit-section').style.display = 'none';
+}
+
+function showEditPage() {
+    document.getElementById('table-section').style.display = 'none';
+    document.getElementById('edit-section').style.display = 'block';
+}
+
+</script>
+
+
+</body>
+</html>
